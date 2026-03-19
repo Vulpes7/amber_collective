@@ -1,16 +1,23 @@
-<header>
-  <img src="/brand/logo.png" alt="Logo" />
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/portfolio">Portfolio</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amber Collective</title>
+</head>
+<body>
+  <header>
+    <img src="/brand/logo.png" alt="Amber Collective Logo" />
+    <h1>Amber Collective</h1>
+  </header>
 
-<footer>
-  <img src="/brand/logo.png" alt="Logo" />
-  <p>&copy; 2026 Amber Collective</p>
-</footer>
+  <main>
+    {/* Content goes here */}
+  </main>
+
+  <footer>
+    <img src="/brand/logo.png" alt="Amber Collective Logo" />
+    <p>&copy; 2026 Amber Collective</p>
+  </footer>
+</body>
+</html>
