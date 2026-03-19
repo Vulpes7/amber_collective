@@ -1,26 +1,27 @@
-import React from 'react';
-import Link from 'next/link';
+import './globals.css';
+import Image from 'next/image';
 
-const Layout = ({ children }) => {
+export default function RootLayout({ children }) {
     return (
-        <div>
+        <html lang="en">
+        <body>
             <header>
                 <nav>
+                    <Image src="/brand/logo.png" alt="Logo" width={50} height={50} />
+                    <h1>Amber Collective</h1>
                     <ul>
-                        <li><Link href='/' >Home</Link></li>
-                        <li><Link href='/about' >About</Link></li>
-                        <li><Link href='/services' >Services</Link></li>
-                        <li><Link href='/contact' >Contact</Link></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/portfolio">Portfolio</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
                     </ul>
                 </nav>
             </header>
-            <main>{children}</main>
+            {children}
             <footer>
-                <img src='/brand/logo.png' alt='Brand Logo' />
-                <p>&copy; 2026 Your Company Name. All rights reserved.</p>
+                <p>&copy; {new Date().getFullYear()}</p>
             </footer>
-        </div>
+        </body>
+        </html>
     );
-};
-
-export default Layout;
+}
