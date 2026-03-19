@@ -1,23 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amber Collective</title>
-</head>
-<body>
-  <header>
-    <img src="/brand/logo.png" alt="Amber Collective Logo" />
-    <h1>Amber Collective</h1>
-  </header>
+import './globals.css';
 
-  <main>
-    {/* Content goes here */}
-  </main>
+export const metadata = {
+  title: 'Amber Collective',
+  description: 'Welcome to Amber Collective, a hub of creativity and innovation.',
+};
 
-  <footer>
-    <img src="/brand/logo.png" alt="Amber Collective Logo" />
-    <p>&copy; 2026 Amber Collective</p>
-  </footer>
-</body>
-</html>
+const RootLayout = ({ children }) => {
+  const currentYear = new Date().getFullYear();
+  return (
+    <html lang="en">
+      <body>
+        <header>
+          <img src="/brand/logo.png" alt="Amber Collective Logo" />
+          <h1>Amber Collective</h1>
+        </header>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+        <main>{children}</main>
+        <footer>
+          <p>&copy; {currentYear} Amber Collective</p>
+        </footer>
+      </body>
+    </html>
+  );
+};
+
+export default RootLayout;
